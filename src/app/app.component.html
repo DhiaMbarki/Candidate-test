@@ -1,0 +1,42 @@
+<div class="hh">
+
+  <div class="col-12">
+
+    <!-- <h1 class="mb-5 display-4">The Easy Way to Create Your Annotations</h1> -->
+
+    <ngx-annotate-text [(annotations)]="annotations" [removable]="" [text]="text" annotationClass="my-annotation"
+      #annotateText>
+    </ngx-annotate-text>
+
+  </div>
+
+</div>
+
+<div class="row mt-3">
+
+  <div class="ss">
+
+    <button class="cc" type="button" class="btn btn-primary mr-2" (click)="addAnnotation('SKILLS', '#8A2BE2')">SKILLS</button>
+    <button type="button" class="btn btn-secondary mr-2" (click)="addAnnotation('EXPERIENCE', '#5a6268')">EXPERIENCE</button>
+    <button type="button" class="btn btn-success mr-2" (click)="addAnnotation('DIPLOMA', '#28a745')">DIPLOMA</button>
+    <button type="button" class="btn btn-danger mr-2" (click)="addAnnotation('DIPLOMA-MAJOR', '#dc3545')">DIPLOMA-MAJOR</button>
+<h3>Label list</h3>
+  </div>
+
+  <div class="col-6">
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let a of annotations"> text:
+        "{{ a.text }}", label: {{ a.label }}</li>
+    </ul>
+
+  </div>
+
+</div>
+<div id="scroll-container">
+  <div id="scroll-text">
+    Choose your label<br>
+    and select text to<br>
+    start annotating
+  <div>
+</div>

@@ -25,10 +25,11 @@
 
   <div class="col-6">
 
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let a of annotations"> text:
-        "{{ a.text }}", label: {{ a.label }}</li>
-    </ul>
+    <h2 class="">Exported JSON file</h2>
+    <div class="">
+      <div  *ngFor="let a of annotations"> <p> &#123;"Documents": "my name is Dhia Mbarki, I From tunisia, I m full stack developer , I have more then 2 years experience in web applications.","annotation": &#91;&#123;"start": "{{ a.startIndex }}", "end": "{{ a.endIndex }}", "text": "{{ a.text }}", "label": "{{ a.label }}",&#125;&#93;&#125; </p> 
+          </div>
+    </div>
 
   </div>
 
